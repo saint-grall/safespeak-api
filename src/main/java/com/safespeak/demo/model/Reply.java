@@ -21,10 +21,6 @@ public class Reply {
     @JoinColumn(name = "story_id")
     private Story story;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
     public Long getId() {
         return id;
     }
@@ -47,13 +43,5 @@ public class Reply {
 
     public void setStory(Story story) {
         this.story = story;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
